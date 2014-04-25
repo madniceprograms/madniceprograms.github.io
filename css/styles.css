@@ -417,8 +417,3 @@ nav ul li a.current {
 	position: relative;
 	top: 1px;
 }
-
-.homead {
-    position: absolute;
-    left: 50%;
-}
