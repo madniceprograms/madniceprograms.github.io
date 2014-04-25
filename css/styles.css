@@ -419,9 +419,6 @@ nav ul li a.current {
 }
 
 .homead {
-    align-content: center;
-    align-items: center;
-    align-self: center;
     position: absolute;
     left: 50%;
 }
