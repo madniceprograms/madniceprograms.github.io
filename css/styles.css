@@ -331,11 +331,11 @@ nav ul li a {
 }
 
 nav ul li a: hover {
-	color: #CC3333;
+	color: #a3c409;
 }
 
 nav ul li a.current {
-	color: #CC3333;
+	color: #a3c409;
 }
 
 .content_menu {
