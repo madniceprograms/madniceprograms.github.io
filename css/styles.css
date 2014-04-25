@@ -417,3 +417,7 @@ nav ul li a.current {
 	position: relative;
 	top: 1px;
 }
+
+.homead {
+    align-content: center;   
+}
