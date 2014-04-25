@@ -419,5 +419,7 @@ nav ul li a.current {
 }
 
 .homead {
-    align-content: center;   
+    align-content: center;
+    align-items: center;
+    align-self: center;
 }
