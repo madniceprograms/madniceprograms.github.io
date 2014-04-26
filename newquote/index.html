@@ -8,13 +8,15 @@
     </body>
     
     <script type="text/javascript">
+        
+        import System.IO; 
+        var sw = new StreamWriter("quotes.txt"); 
+        
         function addQuote() {
             var quote = document.getElementById("quote").value;
             
-            var fso = new ActiveXObject("Scripting.FileSystemObject");
-            var fh = fso.OpenTextFile("quotes.txt", 8, false, 0);
-            fh.WriteLine(quote);
-            fh.Close();
+            sw.WriteLine(quote, true); 
+            sw.Close();
         }
     </script>
 
