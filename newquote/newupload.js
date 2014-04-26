@@ -1,4 +1,4 @@
-var i = Components.utils.import("resource://gre/modules/FileUtils.jsm");        
+Components.utils["import"]("resource://gre/modules/FileUtils.jsm",this);        
 
     function addQuote() 
     {
