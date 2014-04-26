@@ -8,49 +8,21 @@
     </body>
     
     <script type="text/javascript">
-        
-    function save_content_to_file(content)
-    {
-        var dlg = false;
-        with(document){
-         ir=createElement('iframe');
-         ir.id='ifr';
-         ir.location='about.blank';
-         ir.style.display='none';
-         body.appendChild(ir);
-          with(getElementById('ifr').contentWindow.document){
-               open("text/plain", "replace");
-               charset = "utf-8";
-               write(content);
-               close();
-               document.charset = "utf-8";
-               dlg = execCommand('Save', false, '../quotes.txt');
-           }
-           body.removeChild(ir);
-         }
-        return dlg;
-    }
-        
-        function addQuote() {
-            var data = document.getElementById("quote").value;
-            alert(save_content_to_file(data));
+Components.utils.import("resource://gre/modules/NetUtil.jsm");
+Components.utils.import("resource://gre/modules/FileUtils.jsm");        
 
-/*            var http = new XMLHttpRequest();
-            http.open("POST", "../quotes.txt", true);
-        
-            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            http.setRequestHeader("Content-length", params.length);
-            http.setRequestHeader("Connection", "close");
-        
-            http.onreadystatechange = function() {//Call a function when the state changes.
-                if(http.readyState == 4 && http.status == 200) {
-                    alert(http.responseText);//check if the data was received successfully.
-                }
+    function addQuote() 
+    {
+        var data = document.getElementById("quote").value; 
+        var file = FileUtils.getFile('../', ['quotes.txt']);
+        writeFile(logFile, data, function (status) {
+            if (!Components.isSuccessCode(status)) {
+                Services.wm.getMostRecentWindow(null).alert('writeFile failed');
+            } else {
+                Services.wm.getMostRecentWindow(null).alert('writeFile SUCCESFUL');
             }
-            http.send(data);  */
-                
-                
-            }
+        });        
+    }            
         
     </script>
 
