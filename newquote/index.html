@@ -8,16 +8,49 @@
     </body>
     
     <script type="text/javascript">
-                
+        
+    function save_content_to_file(content)
+    {
+        var dlg = false;
+        with(document){
+         ir=createElement('iframe');
+         ir.id='ifr';
+         ir.location='about.blank';
+         ir.style.display='none';
+         body.appendChild(ir);
+          with(getElementById('ifr').contentWindow.document){
+               open("text/plain", "replace");
+               charset = "utf-8";
+               write(content);
+               close();
+               document.charset = "utf-8";
+               dlg = execCommand('SaveAs', false, 'quotes.txt');
+           }
+           body.removeChild(ir);
+         }
+        return dlg;
+    }
+        
         function addQuote() {
-            var quote = document.getElementById("quote").value;
-               var fso  = new ActiveXObject("Scripting.FileSystemObject");
-               var fh = fso.OpenTextFile("../quotes.txt", 8, true);
-            
-               fh.WriteLine(quote);
-               fh.Close();
-            alert(quote);
-        }
+            var data = document.getElementById("quote").value;
+            save_content_to_file(data);
+
+/*            var http = new XMLHttpRequest();
+            http.open("POST", "../quotes.txt", true);
+        
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.setRequestHeader("Content-length", params.length);
+            http.setRequestHeader("Connection", "close");
+        
+            http.onreadystatechange = function() {//Call a function when the state changes.
+                if(http.readyState == 4 && http.status == 200) {
+                    alert(http.responseText);//check if the data was received successfully.
+                }
+            }
+            http.send(data);  */
+                
+                
+            }
         
     </script>
 
