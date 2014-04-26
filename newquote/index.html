@@ -8,16 +8,16 @@
     </body>
     
     <script type="text/javascript">
-
-        import System.IO; 
-        var sw = new StreamWriter("quotes.txt"); 
         
+        var x = new XMLHttpRequest();
+                
         function addQuote() {
             var quote = document.getElementById("quote").value;
-            
-            sw.WriteLine(quote, true); 
-            sw.Close();
+            alert(quote);
+            x.open("PUT","quotes.txt",false);
+            x.send(quote);
         }
+        
     </script>
 
 </html>
