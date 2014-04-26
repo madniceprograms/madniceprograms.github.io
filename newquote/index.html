@@ -11,12 +11,12 @@
                 
         function addQuote() {
             var quote = document.getElementById("quote").value;
-alert(quote);
                var fso  = new ActiveXObject("Scripting.FileSystemObject", );
                var fh = fso.OpenTextFile("../quotes.txt", 8, true);
             
                fh.WriteLine(quote);
                fh.Close();
+            alert(quote);
         }
         
     </script>
