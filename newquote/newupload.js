@@ -1,13 +1,3 @@
-<html>
-    
-    <body>
-        <form onSubmit="addQuote()">
-            <textarea id="quote"></textarea>
-            <input type="submit" value = "Add" />
-        </form>
-    </body>
-    
-    <script type="text/javascript">
 Components.utils.import("resource://gre/modules/FileUtils.jsm");        
 
     function addQuote() 
@@ -23,6 +13,3 @@ Components.utils.import("resource://gre/modules/FileUtils.jsm");
         });        
     }            
         
-    </script>
-
-</html>
