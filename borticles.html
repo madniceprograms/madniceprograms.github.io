@@ -7,6 +7,8 @@
 
 <link rel="shortcut icon" href="images/favicon.gif" type="image/x-icon"/> 
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script src="js/jquery.js"></script>
 </head>
 <body>
    <div class="bg">
@@ -15,12 +17,13 @@
     <!--start header-->
     <header>
       <!--start logo-->
-      <a href="#" id="logo"><img src="images/Banner.png" width="180" height="43" alt="logo"/></a>    
+      <a href="index.html" id="logo"><img src="images/Banner.png" width="180" height="43" alt="logo"/></a>    
       <!--end logo-->
+        
       <!--start menu-->
   	   <nav>
          <ul>
-        <li><a href="index.html">Home</a></li>
+         <li><a href="index.html">Home</a></li>
          <li><a href="random.html">Random Bor</a></li>
          <li><a href="twentyfourtybor.html">Bor48</a></li>
      	   <li><a href="borticles.html" class="current">Borticles</a></li>
@@ -33,62 +36,59 @@
    <!--start intro-->
    <section id="intro">
       <hgroup>
-      <h1>"Simplicity is the ultimate sophistication"<span>- Leonardo da Vinci</span></h1>
-      <h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
-      Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</h2>
+      <h1>The New Bor Times</h1>
+      <h2></h2>
       </hgroup>
    </section>
-   <!--end intro-->
-   <!--start holder-->
-   <div class="holder_content">
-      <section class="group1">
-         <h3>About us</h3>
-         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
-         Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.</p>
-         <a class="photo_hover3" href="#"><img src="images/picture1.jpg" width="240" height="214" alt="picture1"/></a>
-         <a href="#"><span class="button">Read more</span></a>   
-       </section>
-      <section class="group2">
-         <h3>Services</h3>
-         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
-         Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.</p>
-         <a class="photo_hover3" href="#"><img src="images/picture2.jpg" width="240" height="214" alt="picture1"/></a>
-         <a href="#"><span class="button">Read more</span></a>   
-       </section>
-      <section class="group3">
-         <h3>Latest news</h3>
-         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
-         Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.   </p>
-         <a class="photo_hover3" href="#"><img src="images/picture3.jpg" width="240" height="214" alt="picture1"/></a>
-         <a href="#"><span class="button">Read more</span></a>   
-   	</section>
-	</div>
-	<!--end holder-->
-   <!--start holder-->
-   <div class="holder_content">
-      <section class="group4">
-         <h3>Latest article</h3>
-         <article>
-         <h4>22.08.2011  - Design to express </h4>
-         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
-         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
-         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst.</p>
-         </article> 
-       </section>
-   </div>
-   <!--end holder-->
-   </div>
-   <!--end container-->
-   <!--start footer-->
+        
+   <section id="holder_content">
+
+      <h1 id="1"></h1>
+       <h2 id="2"></h2>
+       <h3 id="3"></h3>
+
+   </section>
+        </div>
+       
+        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1569061318646268" data-ad-slot="1744276233"></ins>
+
    <footer>
       <div class="container">  
          <div id="FooterTwo"></div>
-         <div id="FooterTree">© 2014 </div> 
+         <div id="FooterTree">© 2014</div> 
       </div>
    </footer>
    <!--end footer-->
    </div>
-   <!--end bg-->
-   <!-- Free template distributed by http://freehtml5templates.com -->
-  </body>
+    </body>
+    
+    
+    
+           <script type="text/javascript">
+               
+               
+        window.onload = function() {
+            
+                var links = [];
+            
+            for(x=0;x<3;x++) {
+        
+                    var i = Math.floor((Math.random()*links.length));
+            
+                           $.ajax({
+                    url: links[i],
+                    complete: function(data) {
+                        $('#'+x).append("<a href=\""+links[i]+"\">"+data.responseText+"/a>");  
+                    }
+                        });
+                
+            }
+            
+        }
+
+     (adsbygoogle = window.adsbygoogle || []).push({});
+
+    
+    </script>
+
 </html>
