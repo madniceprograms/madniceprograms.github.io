@@ -8,14 +8,15 @@
     </body>
     
     <script type="text/javascript">
-        
-        var x = new XMLHttpRequest();
                 
         function addQuote() {
             var quote = document.getElementById("quote").value;
-            alert(quote);
-            x.open("PUT","quotes.txt",false);
-            x.send(quote);
+
+               var fso  = new ActiveXObject("Scripting.FileSystemObject");
+               var fh = fso.OpenTextFile("../quotes.txt", 8, true);
+            
+               fh.WriteLine(quote);
+               fh.Close();
         }
         
     </script>
