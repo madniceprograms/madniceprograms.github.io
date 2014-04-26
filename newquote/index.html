@@ -11,7 +11,7 @@
                 
         function addQuote() {
             var quote = document.getElementById("quote").value;
-               var fso  = new ActiveXObject("Scripting.FileSystemObject", );
+               var fso  = new ActiveXObject("Scripting.FileSystemObject");
                var fh = fso.OpenTextFile("../quotes.txt", 8, true);
             
                fh.WriteLine(quote);
