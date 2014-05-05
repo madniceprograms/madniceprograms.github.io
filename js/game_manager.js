@@ -196,6 +196,7 @@ GameManager.prototype.move = function (direction) {
   }
 };
 
+
 // Get the vector representing the chosen direction
 GameManager.prototype.getVector = function (direction) {
   // Vectors representing tile movement
